@@ -6,8 +6,11 @@
 Generate beautiful, high-resolution PDF territory maps complete with detailed address lists, ready for print or digital use. Combines clear OpenStreetMap backgrounds with precise KML address data overlays.
 
 ---
+## Gui:
 <img src="https://github.com/user-attachments/assets/7bb84771-be87-471e-88fa-99898a52ec73" width="600" />
 
+## Output:
+<img src="https://github.com/user-attachments/assets/1e3ef471-3a24-4518-b57d-32794ad88d23" width="600" />
 
 ---
 
