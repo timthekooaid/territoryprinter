@@ -1,54 +1,74 @@
-<header>
+# 🗺️ Territory Map & Address List Generator ✨
 
-<!--
-  <<< Author notes: Course header >>>
-  Include a 1280×640 image, course title in sentence case, and a concise description in emphasis.
-  In your repository settings: enable template repository, add your 1280×640 social image, auto delete head branches.
-  Add your open source license, GitHub uses MIT license.
--->
+**(Optional: Add your logo here!)**
 
-# GitHub Pages
-
-_Create a site or blog from your GitHub repositories with GitHub Pages._
-
-</header>
-
-<!--
-  <<< Author notes: Step 1 >>>
-  Choose 3-5 steps for your course.
-  The first step is always the hardest, so pick something easy!
-  Link to docs.github.com for further explanations.
-  Encourage users to open new tabs for steps!
--->
-
-## Step 1: Enable GitHub Pages
-
-_Welcome to GitHub Pages and Jekyll :tada:!_
-
-The first step is to enable GitHub Pages on this [repository](https://docs.github.com/en/get-started/quickstart/github-glossary#repository). When you enable GitHub Pages on a repository, GitHub takes the content that's on the main branch and publishes a website based on its contents.
-
-### :keyboard: Activity: Enable GitHub Pages
-
-1. Open a new browser tab, and work on the steps in your second tab while you read the instructions in this tab.
-1. Under your repository name, click **Settings**.
-1. Click **Pages** in the **Code and automation** section.
-1. Ensure "Deploy from a branch" is selected from the **Source** drop-down menu, and then select `main` from the **Branch** drop-down menu.
-1. Click the **Save** button.
-1. Wait about _one minute_ then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
-   > Turning on GitHub Pages creates a deployment of your repository. GitHub Actions may take up to a minute to respond while waiting for the deployment. Future steps will be about 20 seconds; this step is slower.
-   > **Note**: In the **Pages** of **Settings**, the **Visit site** button will appear at the top. Click the button to see your GitHub Pages site.
-
-<footer>
-
-<!--
-  <<< Author notes: Footer >>>
-  Add a link to get support, GitHub status page, code of conduct, license link.
--->
+Generate beautiful, high-resolution PDF territory maps complete with detailed address lists, ready for print or digital use. Combines clear OpenStreetMap backgrounds with precise KML address data overlays.
 
 ---
 
-Get help: [Post in our discussion board](https://github.com/orgs/skills/discussions/categories/github-pages) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
+![App Screenshot Placeholder](placeholder.png)
+*(Suggestion: Replace placeholder.png with an actual screenshot of your application's GUI)*
 
-&copy; 2023 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
+---
 
-</footer>
+## 🚀 Key Features
+
+*   **Modern GUI:** Easy-to-use graphical interface built with PyQt6 for Windows.
+*   **CSV Input:** Define territory boundaries and identifiers using a simple CSV file.
+*   **KML Integration:** Overlay accurate address points (including house numbers) directly from your local KML files.
+*   **High-Quality Maps:** Utilizes clear OpenStreetMap background tiles (`contextily`) zoomed appropriately for detail.
+*   **Territory Focus:** Automatically dims the map area outside the specified territory boundary for better visibility.
+*   **Detailed Address Lists:** Generates multi-page, spreadsheet-style address tables within the PDF, grouped by street and naturally sorted (`reportlab`).
+*   **Responsive UI:** Map generation runs in the background, keeping the application responsive (`QThread`).
+*   **PDF Output:** Creates professional, high-resolution PDF files perfect for printing or sharing.
+
+## 🛠️ Technologies Used
+
+*   **Python 3**
+*   **PyQt6:** For the graphical user interface.
+*   **ReportLab:** For advanced PDF generation and table creation.
+*   **GeoPandas & Shapely:** For spatial data handling and operations.
+*   **Contextily:** For fetching and displaying OpenStreetMap background map tiles.
+*   **pyKML & lxml:** For robust KML file parsing.
+*   **Pandas:** For efficient CSV data reading.
+*   **Pillow (PIL):** For image handling.
+
+## ⚙️ Installation & Setup
+
+1.  **Clone or Download:** Get the code from this repository.
+2.  **Python:** Ensure you have Python 3.9+ installed and added to your PATH.
+3.  **Create Virtual Environment (Recommended):**
+    ```bash
+    cd your-project-folder
+    python -m venv venv
+    venv\Scripts\activate
+    ```
+4.  **Install Dependencies:**
+    ```bash
+    pip install pandas geopandas matplotlib shapely contextily pykml lxml reportlab Pillow PyQt6
+    ```
+    *(Note: Installing GeoPandas on Windows might require extra steps if `pip` fails. Using `conda` or pre-compiled wheels might be necessary. See GeoPandas documentation.)*
+
+## ▶️ How to Use
+
+1.  **Activate Virtual Environment** (if you created one):
+    ```bash
+    venv\Scripts\activate
+    ```
+2.  **Run the Application:**
+    ```bash
+    python map_generator_gui.py
+    ```
+3.  **Select Files:**
+    *   Use the "Browse..." buttons to select your territory **CSV file**.
+    *   Select your **KML file** containing the address points.
+    *   Choose an **Output Folder** where the PDFs will be saved.
+4.  **Generate:** Click the "Generate PDFs" button.
+5.  **Monitor Progress:** Watch the status bar, progress bar, and log area for updates.
+6.  **Done!** PDFs will appear in your selected output folder upon completion.
+
+*(Optional: To create a standalone `.exe`, use PyInstaller after installation: `pyinstaller --onefile --windowed --name TerritoryMapper your_script_name.py`. You may need to add `--hidden-import` flags if PyInstaller misses dependencies like `rasterio.sample`)*
+
+---
+
+Enjoy generating your maps! 💡
