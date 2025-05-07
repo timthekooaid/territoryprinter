@@ -1,13 +1,13 @@
 # 🗺️ Territory Map & Address List Generator ✨
 
-**(Optional: Add your logo here!)**
+<img src="https://github.com/user-attachments/assets/813e0663-da60-4ddc-8d2e-befc5919b539" width="300" />
+
 
 Generate beautiful, high-resolution PDF territory maps complete with detailed address lists, ready for print or digital use. Combines clear OpenStreetMap backgrounds with precise KML address data overlays.
 
 ---
+<img src="https://github.com/user-attachments/assets/7bb84771-be87-471e-88fa-99898a52ec73" width="300" />
 
-![App Screenshot Placeholder](placeholder.png)
-*(Suggestion: Replace placeholder.png with an actual screenshot of your application's GUI)*
 
 ---
 
